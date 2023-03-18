@@ -28,29 +28,29 @@ To start we need to get required lib:
 
 After that we can see the output as below:
 
-- messageProducer.py
+# messageProducer.py
 
-  Message sent 1
-  Message sent 2
-  Message sent 3
-  Message sent 4
-  Message sent 5
-  Message sent 6
-  Message sent 7
-  Message sent 8
-  Message sent 9
-  Message sent 10
+Message sent 1
+Message sent 2
+Message sent 3
+Message sent 4
+Message sent 5
+Message sent 6
+Message sent 7
+Message sent 8
+Message sent 9
+Message sent 10
 
-- messageConsumer.py
+# messageConsumer.py
 
-  Starting the message queue
-  Message 11:24:54.213386
-  Message 11:24:56.215629
-  Message 11:24:58.219172
-  Message 11:25:00.221930
-  Message 11:25:02.223259
-  Message 11:25:04.242546
-  Message 11:25:06.260914
-  Message 11:25:08.269712
-  Message 11:25:10.281718
-  Message 11:25:12.292985
+Starting the message queue
+Message 11:24:54.213386
+Message 11:24:56.215629
+Message 11:24:58.219172
+Message 11:25:00.221930
+Message 11:25:02.223259
+Message 11:25:04.242546
+Message 11:25:06.260914
+Message 11:25:08.269712
+Message 11:25:10.281718
+Message 11:25:12.292985
