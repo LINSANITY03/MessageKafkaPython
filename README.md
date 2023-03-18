@@ -2,7 +2,7 @@
 
 To start we need to get required lib:
 
-- Install the kafka lib in your venv. Also visit https://pypi.org/project/kafka-python/ for docs
+- Install the kafka lib in your venv. Also visit https://pypi.org/project/kafka-python/ for docs.
 
   >>> pip install kafka-python
 
