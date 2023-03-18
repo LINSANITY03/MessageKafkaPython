@@ -14,6 +14,40 @@ To start we need to get required lib:
   docker pull bitnami/kafka:3.4.0
   ```
 
+# messageProducer.py
+  In this file we create a producer with topic named **'tunne1'** listening to default port **localhost:9092** and send a written text.
+  ```
+  producer = KafkaProducer(
+    bootstrap_servers=['localhost:9092'], api_version=(0, 10, 1))
+  producer.send('tunnel1', json.dumps(
+    'Starting the message queue').encode('utf-8'))
+   ```
+   For additional message we sleep the loop for 2 seconds and send the current time as a message for the consumer.
+   ```
+   now = datetime.now()
+
+   current_time = now.strftime("%d/%m/%Y %H:%M:%S")
+
+   for i in range(10):
+       message = "Message {}".format(str(datetime.now().time()))
+       producer.send('tunnel1', json.dumps(message).encode('utf-8'))
+       sleep(2)
+       print("Message sent ", i+1)
+   ```
+   # messageConsumer.py
+   We initialize a consumer to listen to **'tunnel'** topic on the **localhost:9092** server.
+   ```
+   consumer = KafkaConsumer('tunnel1',
+                         bootstrap_servers=['localhost:9092'],
+                         api_version=(0, 10)
+                         )
+   ```
+   Then we print out the messages received by the consumer.
+   ```
+   for message in consumer:
+    print(json.loads(message.value))
+   ```
+  
 # How to RUN this project.
 
 1. Run the kafka.yaml file using docker-compose.
