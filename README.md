@@ -4,28 +4,30 @@ To start we need to get required lib:
 
 - Install the kafka lib in your venv. Also visit https://pypi.org/project/kafka-python/ for docs.
   ```
-  >>> pip install kafka-python
+  pip install kafka-python
   ```
 - Pull the zookeeper and kafka images from docker hub. Visit https://hub.docker.com/r/bitnami/kafka and https://hub.docker.com/r/bitnami/zookeeper for documentation.
-
-  >>> docker pull bitnami/zookeeper:3.8.1
-
-  >>> docker pull bitnami/kafka:3.4.0
+  ```
+  docker pull bitnami/zookeeper:3.8.1
+  ```
+  ```
+  docker pull bitnami/kafka:3.4.0
+  ```
 
 # How to RUN this project.
 
 1. Run the kafka.yaml file using docker-compose.
-
-   >>> docker-compose -f kafka.yaml up
-
+  ```
+   docker-compose -f kafka.yaml up
+   ```
 2. After successfully running kafka.yaml file, open new terminal and start the messageConsumer.py file to start the message listening. We need to run messageConsumer.py before the messageProducer else there may be data loss.
-
-   >>> python messageProducer.py
-
+  ```
+   python messageProducer.py
+  ```
 3. In another terminal we need to listen to the messageProducer.py to receive the messages.
-
-   >>> python messageConsumer.py
-
+  ```
+   python messageConsumer.py
+  ```
 After that we can see the output as below:
 
 ## messageProducer.py
