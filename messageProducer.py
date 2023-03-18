@@ -1,5 +1,4 @@
 from kafka import KafkaProducer
-from kafka.admin import KafkaAdminClient, NewTopic
 from time import sleep
 import json
 from datetime import datetime
