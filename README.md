@@ -17,6 +17,11 @@ To start we need to get required lib:
 # messageProducer.py
   In this file we create a producer with topic named **'tunne1'** listening to default port **localhost:9092** and send a written text.
   ```
+  from kafka import KafkaProducer
+  from time import sleep
+  import json
+  from datetime import datetime
+  
   producer = KafkaProducer(
     bootstrap_servers=['localhost:9092'], api_version=(0, 10, 1))
   producer.send('tunnel1', json.dumps(
@@ -37,6 +42,9 @@ To start we need to get required lib:
    # messageConsumer.py
    We initialize a consumer to listen to **'tunnel'** topic on the **localhost:9092** server.
    ```
+   from kafka import KafkaConsumer
+   import json
+
    consumer = KafkaConsumer('tunnel1',
                          bootstrap_servers=['localhost:9092'],
                          api_version=(0, 10)
