@@ -3,9 +3,9 @@
 To start we need to get required lib:
 
 - Install the kafka lib in your venv. Also visit https://pypi.org/project/kafka-python/ for docs.
-
+  '''
   >>> pip install kafka-python
-
+  '''
 - Pull the zookeeper and kafka images from docker hub. Visit https://hub.docker.com/r/bitnami/kafka and https://hub.docker.com/r/bitnami/zookeeper for documentation.
 
   >>> docker pull bitnami/zookeeper:3.8.1
