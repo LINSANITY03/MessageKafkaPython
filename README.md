@@ -4,13 +4,13 @@ To start we need to get required lib:
 
 - Install the kafka lib in your venv. Also visit https://pypi.org/project/kafka-python/ for docs
 
-  pip install kafka-python
+  > > > pip install kafka-python
 
 - Pull the zookeeper and kafka images from docker hub. Visit https://hub.docker.com/r/bitnami/kafka and https://hub.docker.com/r/bitnami/zookeeper for documentation.
 
-  docker pull bitnami/zookeeper:3.8.1
+  > > > docker pull bitnami/zookeeper:3.8.1
 
-  docker pull bitnami/kafka:3.4.0
+  > > > docker pull bitnami/kafka:3.4.0
 
 # How to RUN this project.
 
@@ -28,20 +28,25 @@ To start we need to get required lib:
 
 After that we can see the output as below:
 
-# messageProducer.py
+messageProducer.py
 
-Message sent 1
-Message sent 2
-Message sent 3
-Message sent 4
-Message sent 5
-Message sent 6
-Message sent 7
-Message sent 8
-Message sent 9
+---
+
+    Message sent 1
+    Message sent 2
+    Message sent 3
+    Message sent 4
+    Message sent 5
+    Message sent 6
+    Message sent 7
+    Message sent 8
+    Message sent 9
+
 Message sent 10
 
-# messageConsumer.py
+messageConsumer.py
+
+---
 
 Starting the message queue
 Message 11:24:54.213386
